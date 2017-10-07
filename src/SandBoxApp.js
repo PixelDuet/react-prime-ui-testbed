@@ -146,11 +146,11 @@ export default class AppImpl extends React.PureComponent {
                   </p>
                   <h3>Button</h3>
                   <p>
-                    This is a <Button disabled={ disabled }>button</Button>. And this is open <Button disabled={ disabled } href="https://bing.com/" target="_blank">https://www.bing.com/</Button>.
+                    This is a <Button disabled={ disabled }>button</Button>. And this will open <Button disabled={ disabled } href="https://bing.com/" target="_blank">https://www.bing.com/</Button>.
                   </p>
                   <h3>Hyperlink</h3>
                   <p>
-                    This is a <Hyperlink disabled={ disabled }>button</Hyperlink>. And this is open <Hyperlink disabled={ disabled } href="https://bing.com/" target="_blank">https://www.bing.com/</Hyperlink>.
+                    This is an <Hyperlink disabled={ disabled }>hyperlink</Hyperlink>. And this will open <Hyperlink disabled={ disabled } href="https://bing.com/" target="_blank">https://www.bing.com/</Hyperlink>.
                   </p>
                 </div>
               </Navigation.Card>
