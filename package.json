@@ -9,10 +9,8 @@
     "react": "^16.0.0",
     "react-augmentation": "^1.0.0",
     "react-dom": "^16.0.0",
+    "react-prime-ui": "*",
     "react-scripts": "1.0.14"
-  },
-  "peerDependencies": {
-    "react-prime-ui": "*"
   },
   "scripts": {
     "start": "react-scripts start",
