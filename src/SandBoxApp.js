@@ -4,7 +4,7 @@ import { css }    from 'glamor';
 
 import logo from './logo.svg';
 
-import { App, Bare } from 'react-prime-ui';
+import { App, Bare } from '@pixelduet/react-prime-ui';
 
 const { Host, Navigation, Popup, SwipeUp, TabBar } = App;
 

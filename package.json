@@ -1,22 +1,22 @@
 {
-  "name": "react-prime-ui-testbed",
+  "name": "@pixelduet/react-prime-ui-testbed",
   "version": "0.1.0",
   "description": "Testbed for react-prime-ui",
   "author": "William Wong <compulim@hotmail.com> (http://compulim.info/)",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/pixelduet/react-prime-ui.git"
   },
   "dependencies": {
+    "@pixelduet/react-prime-ui": "*",
     "classnames": "^2.2.5",
     "glamor": "^2.20.40",
     "lorem-ipsum": "^1.0.4",
     "react": "^16.0.0",
     "react-augmentation": "^1.0.0",
     "react-dom": "^16.0.0",
-    "react-prime-ui": "*",
     "react-scripts": "1.0.14"
   },
   "scripts": {
