@@ -10,12 +10,12 @@
     "url": "https://github.com/pixelduet/react-prime-ui.git"
   },
   "dependencies": {
-    "@pixelduet/react-prime-ui": "*",
+    "@pixelduet/react-prime-ui": "^1.0.3",
     "classnames": "^2.2.5",
     "glamor": "^2.20.40",
     "lorem-ipsum": "^1.0.4",
     "react": "^16.0.0",
-    "react-augmentation": "^1.0.0",
+    "react-augmentation": "^1.2.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"
   },
