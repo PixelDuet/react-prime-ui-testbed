@@ -2,7 +2,9 @@ import { App, Bare } from '@pixelduet/react-prime-ui';
 import { css }       from 'glamor';
 import React         from 'react';
 
-import ButtonCard from './ButtonCard';
+import ButtonCard    from './ButtonCard';
+import CheckboxCard  from './CheckboxCard';
+import HyperlinkCard from './HyperlinkCard';
 
 const { Navigation } = App;
 const { Button } = Bare;
@@ -15,12 +17,14 @@ export default class ControlsTab extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
-    this.handleBack        = this.handleBack.bind(this);
-    this.handleButtonClick = this.handleNavigate.bind(this, 'Button', ButtonCard);
+    this.handleBack           = this.handleBack.bind(this);
+    this.handleButtonClick    = this.handleNavigate.bind(this, 'Button', ButtonCard);
+    this.handleCheckboxClick  = this.handleNavigate.bind(this, 'Checkbox', CheckboxCard);
+    this.handleHyperlinkClick = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
 
     this.state = {
-      cardComponent: null,
-      title        : null
+      cardComponent: HyperlinkCard,
+      title        : 'Hyperlink'
     };
   }
 
@@ -43,7 +47,15 @@ export default class ControlsTab extends React.PureComponent {
       <Navigation>
         <Navigation.Card title="Controls">
           <div { ...CARD_CSS }>
-            <Button onClick={ this.handleButtonClick }>&lt;Button&gt;</Button>
+            <p>
+              <Button onClick={ this.handleButtonClick }>&lt;Button&gt;</Button>
+            </p>
+            <p>
+              <Button onClick={ this.handleCheckboxClick }>&lt;Checkbox&gt;</Button>
+            </p>
+            <p>
+              <Button onClick={ this.handleHyperlinkClick }>&lt;Hyperlink&gt;</Button>
+            </p>
           </div>
         </Navigation.Card>
         {
