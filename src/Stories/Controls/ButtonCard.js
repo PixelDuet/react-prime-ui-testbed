@@ -41,7 +41,7 @@ export default class ButtonCard extends React.PureComponent {
           Commodo adipisicing incididunt pariatur <Button disabled={ true } >&lt;Button disabled={ '{ true }' }&gt;</Button> exercitation minim.
         </p>
         <p>
-          Nulla amet <Button href="https://bing.com/" target="_blank">&lt;Button href="https://bing.com/" target="_blank"&gt;</Button> ullamco non nisi voluptate proident est ex eu excepteur minim.
+          Nulla amet <Button href="https://bing.com/" target="_blank">&lt;Button href="&hellip;"&gt;</Button> ullamco non nisi voluptate proident est ex eu excepteur minim.
         </p>
         <p>
           Lorem dolore ut magna aliqua <Button disabled={ true } href="https://bing.com/">&lt;Button disabled={ '{ true }' } href="https://bing.com/"&gt;</Button> do ea officia deserunt velit.
