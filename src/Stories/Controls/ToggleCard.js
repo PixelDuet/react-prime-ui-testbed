@@ -29,19 +29,23 @@ export default class ToggleCard extends React.PureComponent {
     return (
       <div { ...CARD_CSS }>
         <h1>&lt;Toggle&gt;</h1>
-        <p>
-          <Toggle
-            checked ={ this.state.value }
-            onChange={ this.handleChange }
-          /> Laboris laboris elit magna laboris velit laborum aute non pariatur non laboris.
-        </p>
-        <p>
-          <Toggle
-            checked ={ this.state.value }
-            disabled={ true }
-            onChange={ this.handleChange }
-          /> &lt;Toggle disabled={ '{ true }' }&gt;
-        </p>
+        <label>
+          <p>
+            <Toggle
+              checked ={ this.state.value }
+              onChange={ this.handleChange }
+            /> Laboris laboris elit magna laboris velit laborum aute non pariatur non laboris.
+          </p>
+        </label>
+        <label>
+          <p>
+            <Toggle
+              checked ={ this.state.value }
+              disabled={ true }
+              onChange={ this.handleChange }
+            /> &lt;Toggle disabled={ '{ true }' }&gt;
+          </p>
+        </label>
       </div>
     );
   }
