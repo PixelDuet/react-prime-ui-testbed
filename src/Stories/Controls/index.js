@@ -3,7 +3,6 @@ import { css }       from 'glamor';
 import React         from 'react';
 
 import ButtonCard    from './ButtonCard';
-import CheckboxCard  from './CheckboxCard';
 import HyperlinkCard from './HyperlinkCard';
 import TextBoxCard   from './TextBoxCard';
 import ToggleCard    from './ToggleCard';
@@ -21,7 +20,6 @@ export default class ControlsTab extends React.PureComponent {
 
     this.handleBack           = this.handleBack.bind(this);
     this.handleButtonClick    = this.handleNavigate.bind(this, 'Button', ButtonCard);
-    this.handleCheckboxClick  = this.handleNavigate.bind(this, 'Checkbox', CheckboxCard);
     this.handleHyperlinkClick = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
     this.handleTextBoxClick   = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
     this.handleToggleClick    = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
@@ -63,9 +61,6 @@ export default class ControlsTab extends React.PureComponent {
             <div { ...CARD_CSS }>
               <p>
                 <Button onClick={ this.handleButtonClick }>&lt;Button&gt;</Button>
-              </p>
-              <p>
-                <Button onClick={ this.handleCheckboxClick }>&lt;Checkbox&gt;</Button>
               </p>
               <p>
                 <Button onClick={ this.handleHyperlinkClick }>&lt;Hyperlink&gt;</Button>
