@@ -2,9 +2,10 @@ import { App, Bare } from '@pixelduet/react-prime-ui';
 import { css }       from 'glamor';
 import React         from 'react';
 
-import ButtonCard    from './ButtonCard';
-import HyperlinkCard from './HyperlinkCard';
-import TextBoxCard   from './TextBoxCard';
+import ButtonCard      from './ButtonCard';
+import HyperlinkCard   from './HyperlinkCard';
+import RadioButtonCard from './RadioButtonCard';
+import TextBoxCard     from './TextBoxCard';
 import ToggleCard    from './ToggleCard';
 
 const { Navigation } = App;
@@ -18,20 +19,21 @@ export default class ControlsTab extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
-    this.handleBack           = this.handleBack.bind(this);
-    this.handleButtonClick    = this.handleNavigate.bind(this, 'Button', ButtonCard);
-    this.handleHyperlinkClick = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
-    this.handleTextBoxClick   = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
-    this.handleToggleClick    = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
+    this.handleBack             = this.handleBack.bind(this);
+    this.handleButtonClick      = this.handleNavigate.bind(this, 'Button', ButtonCard);
+    this.handleHyperlinkClick   = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
+    this.handleRadioButtonClick = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
+    this.handleTextBoxClick     = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
+    this.handleToggleClick      = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
 
-    this.handleGreenClick     = this.handleColorChange.bind(this, '#393');
-    this.handleRedClick       = this.handleColorChange.bind(this, '#933');
-    this.handleBlueClick       = this.handleColorChange.bind(this, '#339');
+    this.handleGreenClick = this.handleColorChange.bind(this, '#393');
+    this.handleRedClick   = this.handleColorChange.bind(this, '#933');
+    this.handleBlueClick  = this.handleColorChange.bind(this, '#339');
 
     this.state = {
       accent       : '#393',
-      cardComponent: ToggleCard,
-      title        : 'Toggle'
+      cardComponent: RadioButtonCard,
+      title        : 'RadioButton'
     };
   }
 
@@ -64,6 +66,9 @@ export default class ControlsTab extends React.PureComponent {
               </p>
               <p>
                 <Button onClick={ this.handleHyperlinkClick }>&lt;Hyperlink&gt;</Button>
+              </p>
+              <p>
+                <Button onClick={ this.handleRadioButtonClick }>&lt;RadioButton&gt;</Button>
               </p>
               <p>
                 <Button onClick={ this.handleTextBoxClick }>&lt;TextBox&gt;</Button>
