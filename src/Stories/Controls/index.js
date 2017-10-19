@@ -5,8 +5,9 @@ import React         from 'react';
 import ButtonCard      from './ButtonCard';
 import HyperlinkCard   from './HyperlinkCard';
 import RadioButtonCard from './RadioButtonCard';
+import SandboxCard     from './SandboxCard';
 import TextBoxCard     from './TextBoxCard';
-import ToggleCard    from './ToggleCard';
+import ToggleCard      from './ToggleCard';
 
 const { Navigation } = App;
 const { Button, Palette } = Bare;
@@ -23,6 +24,7 @@ export default class ControlsTab extends React.PureComponent {
     this.handleButtonClick      = this.handleNavigate.bind(this, 'Button', ButtonCard);
     this.handleHyperlinkClick   = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
     this.handleRadioButtonClick = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
+    this.handleSandboxClick     = this.handleNavigate.bind(this, 'Sandbox', SandboxCard);
     this.handleTextBoxClick     = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
     this.handleToggleClick      = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
 
@@ -61,6 +63,7 @@ export default class ControlsTab extends React.PureComponent {
         <Navigation>
           <Navigation.Card title="Controls">
             <div { ...CARD_CSS }>
+              <h1>Controls</h1>
               <p>
                 <Button onClick={ this.handleButtonClick }>&lt;Button&gt;</Button>
               </p>
@@ -75,6 +78,10 @@ export default class ControlsTab extends React.PureComponent {
               </p>
               <p>
                 <Button onClick={ this.handleToggleClick }>&lt;Toggle&gt;</Button>
+              </p>
+              <h1>Sandbox</h1>
+              <p>
+                <Button onClick={ this.handleSandboxClick }>Open sandbox</Button>
               </p>
               <h1>Palette</h1>
               <p>
