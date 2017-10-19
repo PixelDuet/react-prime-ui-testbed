@@ -32,8 +32,8 @@ export default class ControlsTab extends React.PureComponent {
 
     this.state = {
       accent       : '#393',
-      cardComponent: RadioButtonCard,
-      title        : 'RadioButton'
+      cardComponent: null,
+      title        : ''
     };
   }
 
