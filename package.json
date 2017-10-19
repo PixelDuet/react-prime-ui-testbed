@@ -12,6 +12,7 @@
   "dependencies": {
     "@pixelduet/react-prime-ui": "^1.1.0",
     "classnames": "^2.2.5",
+    "color": "^2.0.0",
     "glamor": "^2.20.40",
     "lorem-ipsum": "^1.0.4",
     "react": "^16.0.0",
