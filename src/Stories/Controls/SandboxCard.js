@@ -1,6 +1,5 @@
-import { css }    from 'glamor';
-import classNames from 'classnames';
-import React      from 'react';
+import { css } from 'glamor';
+import React   from 'react';
 
 const CARD_CSS = css({
   padding: 20
