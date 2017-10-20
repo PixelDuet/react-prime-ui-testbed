@@ -83,6 +83,11 @@ export default class ButtonCard extends React.PureComponent {
             Ullamco consequat aute <Button type="file">&lt;Button type="file"&gt;</Button> consequat incididunt velit.
           </p>
         </label>
+        <label>
+          <p>
+            Minim eiusmod commodo velit <Button type="file" disabled={ true }>&lt;Button type="file" disabled={ '{ true }' }&gt;</Button> consequat non ullamco.
+          </p>
+        </label>
       </div>
     );
   }
