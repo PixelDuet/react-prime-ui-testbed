@@ -8,9 +8,9 @@ const { Navigation, Popup, SwipeUp } = App;
 
 const {
   Button,
-  Checkbox,
   Hyperlink,
-  Input
+  Input,
+  Toggle
 } = Bare;
 
 export default class DemoTab extends React.PureComponent {
@@ -114,12 +114,12 @@ export default class DemoTab extends React.PureComponent {
                 </Popup>
             }
             <p>
-              <Checkbox
+              <Toggle
                 onChange={ this.handleDisabledChange }
                 value   ={ this.state.disabled }
               >
                 Disable all controls
-              </Checkbox>
+              </Toggle>
             </p>
             <h3>Input</h3>
             <p>

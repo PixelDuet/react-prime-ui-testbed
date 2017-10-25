@@ -2,12 +2,12 @@ import { App, Bare } from '@pixelduet/react-prime-ui';
 import { css }       from 'glamor';
 import React         from 'react';
 
-import ButtonCard      from './ButtonCard';
-import HyperlinkCard   from './HyperlinkCard';
-import RadioButtonCard from './RadioButtonCard';
-import SandboxCard     from './SandboxCard';
-import TextBoxCard     from './TextBoxCard';
-import ToggleCard      from './ToggleCard';
+import ButtonCard        from './ButtonCard';
+import HyperlinkCard     from './HyperlinkCard';
+import RadioButtonCard   from './RadioButtonCard';
+import SandboxCard       from './SandboxCard';
+import TextBoxCard       from './TextBoxCard';
+import ToggleCard        from './ToggleCard';
 
 const { Navigation } = App;
 const { Button, Palette } = Bare;
@@ -20,13 +20,13 @@ export default class ControlsTab extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
-    this.handleBack             = this.handleBack.bind(this);
-    this.handleButtonClick      = this.handleNavigate.bind(this, 'Button', ButtonCard);
-    this.handleHyperlinkClick   = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
-    this.handleRadioButtonClick = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
-    this.handleSandboxClick     = this.handleNavigate.bind(this, 'Sandbox', SandboxCard);
-    this.handleTextBoxClick     = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
-    this.handleToggleClick      = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
+    this.handleBack               = this.handleBack.bind(this);
+    this.handleButtonClick        = this.handleNavigate.bind(this, 'Button', ButtonCard);
+    this.handleHyperlinkClick     = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
+    this.handleRadioButtonClick   = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
+    this.handleSandboxClick       = this.handleNavigate.bind(this, 'Sandbox', SandboxCard);
+    this.handleTextBoxClick       = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
+    this.handleToggleClick        = this.handleNavigate.bind(this, 'Toggle', ToggleCard);
 
     this.handleGreenClick = this.handleColorChange.bind(this, '#393');
     this.handleRedClick   = this.handleColorChange.bind(this, '#933');
@@ -46,8 +46,8 @@ export default class ControlsTab extends React.PureComponent {
     }));
   }
 
-  handleColorChange(nextColor) {
-    this.setState(() => ({ accent: nextColor }));
+  handleColorChange(nextAccent) {
+    this.setState(() => ({ accent: nextAccent }));
   }
 
   handleNavigate(nextTitle, nextCardComponent) {
