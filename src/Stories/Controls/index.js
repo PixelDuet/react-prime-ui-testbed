@@ -36,8 +36,8 @@ export default class ControlsTab extends React.PureComponent {
 
     this.state = {
       accent       : '#393',
-      cardComponent: RevealCard,
-      title        : 'Reveal'
+      cardComponent: null,
+      title        : ''
     };
   }
 

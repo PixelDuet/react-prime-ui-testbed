@@ -66,6 +66,16 @@ class RevealCard extends React.Component {
             /> Reveal
           </p>
         </label>
+        <Reveal>
+          {
+            this.state.value &&
+              <div { ...CONTENT_CSS }>
+                <h2>Default animation</h2>
+                <h3>{ this.props.clock }</h3>
+                <p>Veniam et esse eiusmod sunt mollit Lorem fugiat aute aliquip laborum labore aliqua.</p>
+              </div>
+          }
+        </Reveal>
         <Reveal
           concealStyle={ CONCEAL_CSS }
           revealStyle ={ REVEAL_CSS }
@@ -73,8 +83,9 @@ class RevealCard extends React.Component {
           {
             this.state.value &&
               <div { ...CONTENT_CSS }>
-                <h2>{ this.props.clock }</h2>
-                <p>Magna id pariatur magna laboris elit reprehenderit occaecat eu id non culpa dolor cupidatat eiusmod. Tempor elit sunt mollit est magna. Commodo elit incididunt voluptate laborum cillum dolor pariatur consequat dolore reprehenderit non sit adipisicing. Mollit commodo sunt excepteur excepteur occaecat eiusmod Lorem exercitation minim elit. Consequat culpa ad fugiat deserunt et nulla dolore culpa cupidatat laboris labore aliqua minim ullamco. Esse esse mollit cillum dolore qui do. Ad veniam mollit in consequat tempor aute qui exercitation tempor sint.</p>
+                <h2>Custom animation</h2>
+                <h3>{ this.props.clock }</h3>
+                <p>Commodo nostrud commodo esse do magna laborum velit quis mollit nulla duis sit.</p>
               </div>
           }
         </Reveal>
