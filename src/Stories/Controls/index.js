@@ -5,6 +5,7 @@ import React         from 'react';
 import ButtonCard        from './ButtonCard';
 import HyperlinkCard     from './HyperlinkCard';
 import RadioButtonCard   from './RadioButtonCard';
+import RevealCard        from './RevealCard';
 import SandboxCard       from './SandboxCard';
 import TextBoxCard       from './TextBoxCard';
 import ToggleCard        from './ToggleCard';
@@ -23,6 +24,7 @@ export default class ControlsTab extends React.PureComponent {
     this.handleBack               = this.handleBack.bind(this);
     this.handleButtonClick        = this.handleNavigate.bind(this, 'Button', ButtonCard);
     this.handleHyperlinkClick     = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
+    this.handleRevealClick        = this.handleNavigate.bind(this, 'Reveal', RevealCard);
     this.handleRadioButtonClick   = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
     this.handleSandboxClick       = this.handleNavigate.bind(this, 'Sandbox', SandboxCard);
     this.handleTextBoxClick       = this.handleNavigate.bind(this, 'TextBox', TextBoxCard);
@@ -34,8 +36,8 @@ export default class ControlsTab extends React.PureComponent {
 
     this.state = {
       accent       : '#393',
-      cardComponent: null,
-      title        : ''
+      cardComponent: RevealCard,
+      title        : 'Reveal'
     };
   }
 
@@ -72,6 +74,9 @@ export default class ControlsTab extends React.PureComponent {
               </p>
               <p>
                 <Button onClick={ this.handleRadioButtonClick }>&lt;RadioButton&gt;</Button>
+              </p>
+              <p>
+                <Button onClick={ this.handleRevealClick }>&lt;Reveal&gt;</Button>
               </p>
               <p>
                 <Button onClick={ this.handleTextBoxClick }>&lt;TextBox&gt;</Button>
