@@ -1,17 +1,19 @@
-import { App, Bare } from '@pixelduet/react-prime-ui';
-import { css }       from 'glamor';
-import React         from 'react';
+import { App, Bare, Palette } from '@pixelduet/react-prime-ui';
+import { css }                from 'glamor';
+import React                  from 'react';
 
 import ButtonCard        from './ButtonCard';
 import HyperlinkCard     from './HyperlinkCard';
+import PaletteCard       from './PaletteCard';
 import RadioButtonCard   from './RadioButtonCard';
 import RevealCard        from './RevealCard';
 import SandboxCard       from './SandboxCard';
 import TextBoxCard       from './TextBoxCard';
 import ToggleCard        from './ToggleCard';
 
-const { Navigation } = App;
-const { Button, Palette } = Bare;
+const { Navigation }      = App;
+const { Button }          = Bare;
+const { PaletteProvider } = Palette;
 
 const CARD_CSS = css({
   padding: 20
@@ -24,6 +26,7 @@ export default class ControlsTab extends React.PureComponent {
     this.handleBack               = this.handleBack.bind(this);
     this.handleButtonClick        = this.handleNavigate.bind(this, 'Button', ButtonCard);
     this.handleHyperlinkClick     = this.handleNavigate.bind(this, 'Hyperlink', HyperlinkCard);
+    this.handlePaletteClick       = this.handleNavigate.bind(this, 'Palette', PaletteCard);
     this.handleRevealClick        = this.handleNavigate.bind(this, 'Reveal', RevealCard);
     this.handleRadioButtonClick   = this.handleNavigate.bind(this, 'RadioButton', RadioButtonCard);
     this.handleSandboxClick       = this.handleNavigate.bind(this, 'Sandbox', SandboxCard);
@@ -61,7 +64,7 @@ export default class ControlsTab extends React.PureComponent {
 
   render() {
     return (
-      <Palette accent={ this.state.accent }>
+      <PaletteProvider accent={ this.state.accent }>
         <Navigation>
           <Navigation.Card title="Controls">
             <div { ...CARD_CSS }>
@@ -71,6 +74,9 @@ export default class ControlsTab extends React.PureComponent {
               </p>
               <p>
                 <Button onClick={ this.handleHyperlinkClick }>&lt;Hyperlink&gt;</Button>
+              </p>
+              <p>
+                <Button onClick={ this.handlePaletteClick }>&lt;Palette&gt;</Button>
               </p>
               <p>
                 <Button onClick={ this.handleRadioButtonClick }>&lt;RadioButton&gt;</Button>
@@ -112,7 +118,7 @@ export default class ControlsTab extends React.PureComponent {
               false
           }
         </Navigation>
-      </Palette>
+      </PaletteProvider>
     );
   }
 }
