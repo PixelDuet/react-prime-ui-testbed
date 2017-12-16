@@ -73,7 +73,7 @@ class PaletteCard extends React.PureComponent {
         <ul>
           {
             COLOR_NAMES.map(name =>
-              <li>
+              <li key={ name }>
                 <div className="box" style={{ backgroundColor: this.props.palette[name] }} />
                 <small>{ prettyName(name) }</small>
               </li>

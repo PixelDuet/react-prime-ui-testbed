@@ -37,6 +37,9 @@ export default class ControlsTab extends React.PureComponent {
     this.handleRedClick   = this.handleColorChange.bind(this, '#933');
     this.handleBlueClick  = this.handleColorChange.bind(this, '#339');
 
+    this.handleLightClick = this.handleThemeChange.bind(this, 'light');
+    this.handleDarkClick  = this.handleThemeChange.bind(this, 'dark');
+
     this.state = {
       accent       : '#393',
       cardComponent: null,
@@ -55,6 +58,10 @@ export default class ControlsTab extends React.PureComponent {
     this.setState(() => ({ accent: nextAccent }));
   }
 
+  handleThemeChange(nextTheme) {
+    this.setState(() => ({ theme: nextTheme }));
+  }
+
   handleNavigate(nextTitle, nextCardComponent) {
     this.setState(() => ({
       cardComponent: nextCardComponent,
@@ -64,8 +71,8 @@ export default class ControlsTab extends React.PureComponent {
 
   render() {
     return (
-      <PaletteProvider accent={ this.state.accent }>
-        <Navigation>
+      <PaletteProvider accent={ this.state.accent } theme={ this.state.theme }>
+        <Navigation navigationBarColor={ this.state.theme === 'dark' ? '#000' : '#FFF' }>
           <Navigation.Card title="Controls">
             <div { ...CARD_CSS }>
               <h1>Controls</h1>
@@ -103,6 +110,12 @@ export default class ControlsTab extends React.PureComponent {
               </p>
               <p>
                 <Button onClick={ this.handleBlueClick }>Change to blue</Button>
+              </p>
+              <p>
+                <Button onClick={ this.handleLightClick }>Change to light theme</Button>
+              </p>
+              <p>
+                <Button onClick={ this.handleDarkClick }>Change to dark theme</Button>
               </p>
             </div>
           </Navigation.Card>

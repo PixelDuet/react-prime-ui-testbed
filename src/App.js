@@ -3,7 +3,7 @@ import './App.css';
 
 import SandBoxApp from './SandBoxApp';
 
-class App extends React.PureComponent {
+class App extends React.Component {
   render() {
     return (
       <SandBoxApp />
