@@ -1,14 +1,14 @@
-import React            from 'react';
-import { css }          from 'glamor';
-import { App, Palette } from '@pixelduet/react-prime-ui';
+import { App }             from '@pixelduet/react-prime-ui';
+import { css }             from 'glamor';
+import { PaletteProvider } from 'react-accent-color';
+import React               from 'react';
 
 import DemoTab     from './Stories/Demo';
 import ControlsTab from './Stories/Controls';
 
-const { Host, TabBar }    = App;
-const { PaletteProvider } = Palette;
+const { Host, TabBar } = App;
 
-const ROOT_CSS = css({
+const CSS = css({
   height: '100%',
   width : '100%'
 });
@@ -30,7 +30,7 @@ export default class AppImpl extends React.PureComponent {
 
   render() {
     return(
-      <Host css={ ROOT_CSS }>
+      <Host css={ CSS }>
         <PaletteProvider>
           <TabBar
             onChange={ this.handleTabChange }

@@ -1,8 +1,6 @@
-import { Palette } from '@pixelduet/react-prime-ui';
-import { css }     from 'glamor';
-import React       from 'react';
-
-const { withPalette } = Palette;
+import { css }         from 'glamor';
+import { withPalette } from 'react-accent-color';
+import React           from 'react';
 
 const CARD_CSS = css({
   padding: 20,
@@ -89,4 +87,4 @@ function prettyName(name) {
   return name.replace(/([A-Z])/g, ' $1').replace(/(\w)(\d)/g, '$1 $2').toLowerCase();
 }
 
-export default withPalette(palette => ({ palette }))(PaletteCard)
+export default withPalette(({ palette }) => ({ palette }))(PaletteCard)

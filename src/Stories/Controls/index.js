@@ -1,6 +1,7 @@
-import { App, Bare, Palette } from '@pixelduet/react-prime-ui';
-import { css }                from 'glamor';
-import React                  from 'react';
+import { App, Bare }       from '@pixelduet/react-prime-ui';
+import { css }             from 'glamor';
+import { PaletteProvider } from 'react-accent-color';
+import React               from 'react';
 
 import ButtonCard        from './ButtonCard';
 import HyperlinkCard     from './HyperlinkCard';
@@ -13,7 +14,6 @@ import ToggleCard        from './ToggleCard';
 
 const { Navigation }      = App;
 const { Button }          = Bare;
-const { PaletteProvider } = Palette;
 
 const CARD_CSS = css({
   padding: 20
